@@ -13,6 +13,16 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
+  print_hello:
+    docker:
+      - image: circleci/node:13.8.0
+    steps:
+      - run: echo hello
+  print_world:
+    docker:
+      - image: circleci/node:13.8.0
+    steps:
+      - run: echo world
   build:
     docker:
       - image: cimg/base:2020.01
